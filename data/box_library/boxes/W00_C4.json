@@ -1,0 +1,291 @@
+{
+ "version": "6.3.1",
+ "flags": {},
+ "shapes": [
+  {
+   "label": "fracture",
+   "points": [
+    [
+     515.2630371426369,
+     748.9999999999955
+    ],
+    [
+     994.1767480798553,
+     199.00000000000517
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t043",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 15.016451883201103
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     578.5335582929107,
+     11.499999999997797
+    ],
+    [
+     894.395206025083,
+     167.05555555554992
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t045",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 7.4324634103155205
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     860.7284397008982,
+     40.666666666668206
+    ],
+    [
+     929.3623429550671,
+     168.4444444444423
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t046",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 2.949288468281089
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     721.9417075628854,
+     239.27777777777973
+    ],
+    [
+     841.3005214224554,
+     354.55555555555725
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t047",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.4418673154675794
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     482.2195172164619,
+     108.72222222222078
+    ],
+    [
+     75.32062151532344,
+     573.9999999999962
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t048",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 12.640842339881015
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     434.6298311893307,
+     107.33333333332837
+    ],
+    [
+     865.9079422121579,
+     179.5555555555582
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t049",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 9.279773571098817
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     147.87271226369114,
+     14.277777777782621
+    ],
+    [
+     0.0,
+     146.298150647791
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t050",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 4.730385101646224
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     217.26697746425634
+    ],
+    [
+     253.53853193605005,
+     273.99999999999636
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t051",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.480746322072717
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     601.8347588619365
+    ],
+    [
+     203.3429385991056,
+     664.2777777777808
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t052",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.265556024477727
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     171.6461028322577,
+     761.5000000000038
+    ],
+    [
+     506.011922316447,
+     535.1111111111142
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t053",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 8.36004976652445
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     367.1936023690506,
+     487.8888888888893
+    ],
+    [
+     469.0011497193545,
+     544.8333333333377
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t054",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 2.4232031652849306
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     800.9208204684569,
+     496.0744680851022
+    ],
+    [
+     975.5579270923938,
+     564.1595744680807
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t096",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.984578693010946
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     225.41495383296706,
+     68.41489361702023
+    ],
+    [
+     392.44058284613317,
+     31.180851063829184
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t097",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.5887505943474443
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     679.571484577826,
+     129.05319148936528
+    ],
+    [
+     846.5801596689573,
+     102.4574468085095
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t098",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.6138283779803047
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     577.5339158944881
+    ],
+    [
+     282.0885859590746,
+     663.0957446808468
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t099",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 11.973752795101007
+  }
+ ],
+ "imagePath": "W00_C4.jpg",
+ "imageData": null,
+ "imageHeight": 772,
+ "imageWidth": 1000,
+ "section1": {
+  "box": "W00_C4",
+  "row": "W00",
+  "col": 4,
+  "u_left_m": -72.9811291424488,
+  "u_right_m": -52.98112914244879,
+  "y_top_m": 0.0,
+  "y_bottom_m": 15.44,
+  "pixel_size_m": 0.02,
+  "centre_stack_m": 7.72
+ }
+}

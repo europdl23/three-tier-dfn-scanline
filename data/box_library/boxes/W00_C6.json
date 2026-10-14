@@ -1,0 +1,237 @@
+{
+ "version": "6.3.1",
+ "flags": {},
+ "shapes": [
+  {
+   "label": "fracture",
+   "points": [
+    [
+     897.0575924192073,
+     83.72222222222761
+    ],
+    [
+     1000.0,
+     262.37517111301554
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t029",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 7.379327564801688
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     389.57539746981024,
+     146.22222222222226
+    ],
+    [
+     535.5628953986269,
+     225.38888888889073
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t035",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.4167795825966536
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     512.0068569983495
+    ],
+    [
+     60.91520382273892,
+     599.0000000000013
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t036",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 9.845762703309301
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     315.81886305671924,
+     529.5555555555562
+    ],
+    [
+     502.1588962981735,
+     769.8333333333348
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t037",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 6.16453917254782
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     267.56973786543733,
+     755.9444444444458
+    ],
+    [
+     385.5512295995755,
+     175.38888888889267
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t038",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 11.865631457134642
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     44.832954605260156,
+     140.66666666666433
+    ],
+    [
+     121.22275966983409,
+     74.00000000000415
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t039",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 2.069957058062361
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     137.31074788960348,
+     87.88888888889315
+    ],
+    [
+     247.45860507838202,
+     129.55555555556015
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t040",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 2.4254311058825597
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     51.53655866340472,
+     80.9444444444428
+    ],
+    [
+     17.996049938185266,
+     505.94444444444383
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t041",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 8.528320648663474
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     880.4240716282864,
+     425.86170212766353
+    ],
+    [
+     1000.0,
+     372.0483436863645
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t086",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.4698468309610595
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     1000.0,
+     598.5770881072192
+    ],
+    [
+     896.5943804474259,
+     654.5851063829833
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t087",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 4.47238901121451
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     694.6497827003881
+    ],
+    [
+     100.04309432650373,
+     575.8617021276577
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t088",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 4.207228253731304
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     66.83947557246191
+    ],
+    [
+     41.535683707376236,
+     91.81914893617423
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t089",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 2.879266668871651
+  }
+ ],
+ "imagePath": "W00_C6.jpg",
+ "imageData": null,
+ "imageHeight": 772,
+ "imageWidth": 1000,
+ "section1": {
+  "box": "W00_C6",
+  "row": "W00",
+  "col": 6,
+  "u_left_m": -32.98112914244879,
+  "u_right_m": -12.981129142448793,
+  "y_top_m": 0.0,
+  "y_bottom_m": 15.44,
+  "pixel_size_m": 0.02,
+  "centre_stack_m": 7.72
+ }
+}

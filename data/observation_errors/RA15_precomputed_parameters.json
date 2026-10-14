@@ -1,0 +1,40 @@
+{
+ "written": "2026-10-09 11:26:44",
+ "n_hits": 577,
+ "struct_angle_a": 0.39664914983943855,
+ "struct_angle_mean": 0.19999999999999996,
+ "struct_angle_share_saturated": 0.0,
+ "struct_length_b": 1.1984320283691217,
+ "struct_length_mean": 0.19999999999999998,
+ "struct_length_share_saturated": 0.0,
+ "hit_angle_to_line_deg_median": 42.2507985407249,
+ "hit_whole_length_m_median": 10.038373126408002,
+ "mislabel_rate_fold": {
+  "0": 0.1720236960746682,
+  "1": 0.18732684971002492,
+  "2": 0.2039181097361535,
+  "3": 0.18558665093691204,
+  "4": 0.23229114748098906,
+  "5": 0.2142105819896373,
+  "6": 0.18307436760880272
+ },
+ "mislabel_rate_CSM": {
+  "0": 0.1720236960746682,
+  "1": 0.18732684971002492,
+  "2": 0.2039181097361535,
+  "3": 0.18558665093691204,
+  "4": 0.23229114748098906,
+  "5": 0.2142105819896373,
+  "6": 0.18307436760880272
+ },
+ "mislabel_rate_CSS": {
+  "0": 0.2,
+  "1": 0.2,
+  "2": 0.2039181097361535,
+  "3": 0.2,
+  "4": 0.23229114748098906,
+  "5": 0.2142105819896373,
+  "6": 0.2
+ },
+ "note": "computed from S2 5 m error-free hits (angles, whole-trace lengths) and fitting-window pieces only; no reconstruction or score was computed"
+}

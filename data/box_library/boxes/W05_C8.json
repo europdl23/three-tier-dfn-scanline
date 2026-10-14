@@ -1,0 +1,363 @@
+{
+ "version": "6.3.1",
+ "flags": {},
+ "shapes": [
+  {
+   "label": "fracture",
+   "points": [
+    [
+     -4.440892098500626e-14,
+     151.93526889391126
+    ],
+    [
+     102.88939855758076,
+     8.881784197001252e-14
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t034",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 27.496768535454287
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     561.0700507263343,
+     1000.0
+    ],
+    [
+     383.7309822001828,
+     298.5392156862765
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t035",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 15.940874994134532
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     653.2516182525098,
+     0.0
+    ],
+    [
+     1000.0,
+     265.2213690883203
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t036",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 13.744580561431793
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     448.29688798269643,
+     16.186274509806186
+    ],
+    [
+     861.5536086096314,
+     192.6568627450958
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t037",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 9.212682030135934
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     460.0310649836396,
+     361.2843137254883
+    ],
+    [
+     315.28272946197626,
+     8.343137254903255
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t038",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 7.632061714443353
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     472.4668655615555
+    ],
+    [
+     125.25661675733213,
+     606.3823529411741
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t039",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.049543091080738
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     233.69428559910563,
+     1000.0
+    ],
+    [
+     137.00817259282542,
+     873.0490196078446
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t045",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 6.0158703348890015
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     88.47884979828837,
+     1000.0
+    ],
+    [
+     137.00817259282542,
+     196.57843137255009
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t046",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 18.19003449319198
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     799.9090204193263
+    ],
+    [
+     99.797791870881,
+     863.2450980392172
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t047",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.807760343196333
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     287.88654647486425,
+     810.303921568627
+    ],
+    [
+     501.0806759631851,
+     875.0098039215686
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t048",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 4.466114032159322
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     164.44073976402933,
+     773.0490196078423
+    ],
+    [
+     399.3792296067944,
+     488.7352941176477
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t049",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 7.380992244987716
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     709.2375970557727,
+     224.61764705882246
+    ],
+    [
+     851.2911998726942,
+     532.852941176473
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t050",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 6.87143427506512
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     391.21783337740703
+    ],
+    [
+     420.3174366397958,
+     483.4411764705899
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t051",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 11.321266389603219
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     161.8932612802875,
+     318.73529411764594
+    ],
+    [
+     252.4210827440312,
+     14.02941176470831
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t052",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 6.357732398086185
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     923.5242812739743,
+     751.2936507936497
+    ],
+    [
+     1000.0,
+     754.6573725263603
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t071",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.2088627582933458
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     1000.0,
+     550.14867720646
+    ],
+    [
+     939.4972589715013,
+     589.3888888888874
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t072",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 4.107156276337255
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     452.3945370943837,
+     541.7698412698393
+    ],
+    [
+     782.2471256113971,
+     735.4206349206355
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t073",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 7.737505064999292
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     54.51043992725122
+    ],
+    [
+     18.088288519383777,
+     113.19841269841255
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t074",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.554705113712282
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     238.52718894200677,
+     798.9126984126976
+    ],
+    [
+     434.97487158699505,
+     587.8015873015854
+    ]
+   ],
+   "group_id": null,
+   "description": "W05_t124",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.7726298363932225
+  }
+ ],
+ "imagePath": "W05_C8.jpg",
+ "imageData": null,
+ "imageHeight": 1000,
+ "imageWidth": 1000,
+ "section1": {
+  "box": "W05_C8",
+  "row": "W05",
+  "col": 8,
+  "u_left_m": 7.018870857551207,
+  "u_right_m": 27.018870857551207,
+  "y_top_m": 2.290000000000001,
+  "y_bottom_m": 22.29,
+  "pixel_size_m": 0.02,
+  "centre_stack_m": 151.91
+ }
+}

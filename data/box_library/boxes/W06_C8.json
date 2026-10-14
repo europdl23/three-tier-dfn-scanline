@@ -1,0 +1,129 @@
+{
+ "version": "6.3.1",
+ "flags": {},
+ "shapes": [
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     596.3991585464827
+    ],
+    [
+     442.17841725102573,
+     840.0000000000018
+    ]
+   ],
+   "group_id": null,
+   "description": "W06_t114",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 12.066285972507249
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     183.43010430959995,
+     24.81012658227996
+    ],
+    [
+     331.5941204200906,
+     277.97468354430464
+    ]
+   ],
+   "group_id": null,
+   "description": "W06_t115",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.878871322316469
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     691.3162728173029,
+     355.18987341772424
+    ],
+    [
+     1000.0,
+     676.9821204974775
+    ]
+   ],
+   "group_id": null,
+   "description": "W06_t116",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 10.223617372884696
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     792.4951870070311,
+     27.34177215189843
+    ],
+    [
+     782.3806734176991,
+     231.1392405063304
+    ]
+   ],
+   "group_id": null,
+   "description": "W06_t118",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 4.080978107087461
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     231.20751907049578,
+     426.0759493670888
+    ],
+    [
+     1000.0,
+     861.2461475663132
+    ]
+   ],
+   "group_id": null,
+   "description": "W06_t119",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 18.398254098843047
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     624.2329851846895,
+     846.3291139240511
+    ],
+    [
+     597.6540459481992,
+     533.6708860759478
+    ]
+   ],
+   "group_id": null,
+   "description": "W06_t120",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 6.275724180374956
+  }
+ ],
+ "imagePath": "W06_C8.jpg",
+ "imageData": null,
+ "imageHeight": 879,
+ "imageWidth": 1000,
+ "section1": {
+  "box": "W06_C8",
+  "row": "W06",
+  "col": 8,
+  "u_left_m": 7.018870857551207,
+  "u_right_m": 27.018870857551207,
+  "y_top_m": 0.0,
+  "y_bottom_m": 17.580000000000002,
+  "pixel_size_m": 0.02,
+  "centre_stack_m": 175.99
+ }
+}

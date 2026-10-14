@@ -1,0 +1,14 @@
+# outputs of reruns
+work/
+study/results/
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# os and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

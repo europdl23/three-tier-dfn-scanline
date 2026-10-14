@@ -1,0 +1,2 @@
+# Byte-exact checkout: no end-of-line conversion, so data and model files are served exactly as committed.
+* -text

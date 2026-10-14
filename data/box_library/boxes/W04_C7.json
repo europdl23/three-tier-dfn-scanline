@@ -1,0 +1,147 @@
+{
+ "version": "6.3.1",
+ "flags": {},
+ "shapes": [
+  {
+   "label": "fracture",
+   "points": [
+    [
+     167.3112420643246,
+     229.44736842105334
+    ],
+    [
+     563.5217602448629,
+     1000.0
+    ]
+   ],
+   "group_id": null,
+   "description": "W04_t030",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 18.52526910918886
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     533.9498350869588,
+     0.0
+    ],
+    [
+     330.34819291809333,
+     355.76315789473927
+    ]
+   ],
+   "group_id": null,
+   "description": "W04_t031",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 9.217741534821318
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     862.4377750617656,
+     350.49999999999847
+    ],
+    [
+     1000.0,
+     400.62876625119134
+    ]
+   ],
+   "group_id": null,
+   "description": "W04_t037",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 6.023823627976834
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     801.9022981125346,
+     657.5422535211279
+    ],
+    [
+     1000.0,
+     712.3111287234102
+    ]
+   ],
+   "group_id": null,
+   "description": "W04_t039",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 10.490149922085008
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     418.84664076716325,
+     384.30281690140936
+    ],
+    [
+     890.556418738349,
+     926.5563380281701
+    ]
+   ],
+   "group_id": null,
+   "description": "W04_t041",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 14.375859771775133
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     575.2699020195236
+    ],
+    [
+     65.84455901796477,
+     602.6126760563411
+    ]
+   ],
+   "group_id": null,
+   "description": "W04_t044",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.3304974937659795
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     867.1614589175135
+    ],
+    [
+     95.22494203454616,
+     635.0070422535188
+    ]
+   ],
+   "group_id": null,
+   "description": "W04_t045",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 7.438806763338407
+  }
+ ],
+ "imagePath": "W04_C7.jpg",
+ "imageData": null,
+ "imageHeight": 1000,
+ "imageWidth": 1000,
+ "section1": {
+  "box": "W04_C7",
+  "row": "W04",
+  "col": 7,
+  "u_left_m": -12.981129142448793,
+  "u_right_m": 7.018870857551207,
+  "y_top_m": 2.3499999999999996,
+  "y_bottom_m": 22.35,
+  "pixel_size_m": 0.02,
+  "centre_stack_m": 124.27
+ }
+}

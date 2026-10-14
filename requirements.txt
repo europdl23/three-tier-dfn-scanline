@@ -1,0 +1,8 @@
+# Python 3.10 or newer. Versions the released results were produced with; nearby versions work.
+numpy>=1.24,<3        # 2.2.6
+scipy>=1.10           # 1.15.3
+pandas>=2.0           # 2.3.3
+torch>=2.0            # 2.6.0 (CPU is sufficient)
+scikit-learn>=1.2     # 1.7.2
+matplotlib>=3.7       # imported by the EVAE utilities
+PyYAML>=6.0           # imported by the EVAE utilities

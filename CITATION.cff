@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use these data or this code, please cite the paper."
+title: "three-tier-dfn-scanline: code, traced data and trained models for three-tier reconstruction of fracture trace maps from scanline observations"
+type: software
+version: "1.0.0"
+date-released: "2026-10-15"
+repository-code: "https://github.com/europdl23/three-tier-dfn-scanline"
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - family-names: Paudyal
+    given-names: Europe
+  - family-names: Tang
+    given-names: Yudi
+  - family-names: Lamei Ramandi
+    given-names: Hamed
+  - family-names: Zhai
+    given-names: Hao
+  - family-names: Yang
+    given-names: Sheng-Qi
+  - family-names: Si
+    given-names: Guangyao
+preferred-citation:
+  type: article
+  title: "A Three-Tier Evidence Hierarchy with Conditioned Generative Models for Discrete Fracture Network Reconstruction from Scanline Observations"
+  journal: "Journal of Rock Mechanics and Geotechnical Engineering"
+  status: submitted
+  authors:
+    - family-names: Paudyal
+      given-names: Europe
+    - family-names: Tang
+      given-names: Yudi
+    - family-names: Lamei Ramandi
+      given-names: Hamed
+    - family-names: Zhai
+      given-names: Hao
+    - family-names: Yang
+      given-names: Sheng-Qi
+    - family-names: Si
+      given-names: Guangyao

@@ -1,0 +1,255 @@
+{
+ "version": "6.3.1",
+ "flags": {},
+ "shapes": [
+  {
+   "label": "fracture",
+   "points": [
+    [
+     -4.440892098500626e-14,
+     445.5082644755916
+    ],
+    [
+     253.61442341149285,
+     748.9999999999955
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t022",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 19.62450361092756
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     70.12536299057341
+    ],
+    [
+     441.08162510498727,
+     740.6666666666644
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t023",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 16.71128287441278
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     355.83963580717693,
+     10.111111111105386
+    ],
+    [
+     753.3813640648772,
+     404.55555555555526
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t024",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 11.515555769972993
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     46.68767036069106,
+     454.5555555555533
+    ],
+    [
+     0.0,
+     238.26736331849588
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t027",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.040652637540666
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     789.6274523272648,
+     543.9468085106402
+    ],
+    [
+     899.996830246432,
+     750.3297872340476
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t073",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 4.787565000380209
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     555.8409914850599,
+     12.031914893618659
+    ],
+    [
+     1000.0,
+     232.16718722979655
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t074",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 10.901530536573162
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     500.11248399078454,
+     37.56382978723269
+    ],
+    [
+     768.3546241831222,
+     297.13829787233993
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t075",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 7.711408537922913
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     63.97404139869387,
+     16.287234042550427
+    ],
+    [
+     493.01471670427827,
+     163.09574468085455
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t076",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 9.365763142396604
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     499.09851723545415,
+     680.1170212765973
+    ],
+    [
+     643.7325403614668,
+     625.8617021276557
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t077",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.2302609469550743
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     371.85037775939963,
+     315.2234042553204
+    ],
+    [
+     624.6210940795035,
+     453.5212765957493
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t078",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.976451449899107
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     0.0,
+     159.33422307234378
+    ],
+    [
+     84.36516190368106,
+     243.94680851064012
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t081",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 5.823921571562113
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     222.5471470048946,
+     92.88297872340424
+    ],
+    [
+     239.05318635689738,
+     297.13829787233993
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t082",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 4.099266239588865
+  },
+  {
+   "label": "fracture",
+   "points": [
+    [
+     309.2896260052296,
+     771.6063829787182
+    ],
+    [
+     306.19111138886035,
+     590.7553191489365
+    ]
+   ],
+   "group_id": null,
+   "description": "W00_t083",
+   "shape_type": "line",
+   "flags": {},
+   "full_length_m": 3.617584436759512
+  }
+ ],
+ "imagePath": "W00_C8.jpg",
+ "imageData": null,
+ "imageHeight": 772,
+ "imageWidth": 1000,
+ "section1": {
+  "box": "W00_C8",
+  "row": "W00",
+  "col": 8,
+  "u_left_m": 7.018870857551207,
+  "u_right_m": 27.018870857551207,
+  "y_top_m": 0.0,
+  "y_bottom_m": 15.44,
+  "pixel_size_m": 0.02,
+  "centre_stack_m": 7.72
+ }
+}
