@@ -1,0 +1,10 @@
+{
+ "n_rate": 0.0488013698630137,
+ "prior": 0.2650365166018715,
+ "a_prior": 2.0,
+ "strips_5m": 3,
+ "e_v": 0.6100831376591468,
+ "fitted_on_windows": 73,
+ "fitted_on_traces": 713,
+ "rule": "P21_hat = (n_hits + a)/(k*H*e_v + a/prior); T = max(1, round(n_rate*20*H*P21_hat/prior)); k = strips in window"
+}

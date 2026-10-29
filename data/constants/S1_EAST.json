@@ -1,0 +1,8 @@
+{
+ "fold": "S1_EAST",
+ "config": "B",
+ "rho": 0.59889857732905,
+ "obs_crossings": 261,
+ "null_crossings": 435.8,
+ "training_windows": 98
+}

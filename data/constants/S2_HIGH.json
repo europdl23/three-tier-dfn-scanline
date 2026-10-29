@@ -1,0 +1,8 @@
+{
+ "fold": "S2_HIGH",
+ "config": "B",
+ "rho": 0.40840250335608547,
+ "obs_crossings": 216,
+ "null_crossings": 528.8899999999999,
+ "training_windows": 176
+}

@@ -1,11 +1,4 @@
 Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-The traced fracture data in data/, the trained models in models/ and study/tr_models/, the stored candidate
-realisations in networks/ and the result tables and reconstructed maps in results/ are released under CC BY 4.0:
+The labelled fracture trace data in data/ and the trained models in models/ are released under CC BY 4.0:
 https://creativecommons.org/licenses/by/4.0/
-
-You are free to share and adapt the material for any purpose, including commercially, provided you give
-appropriate credit.
-
-Not included: photographs, orthoimages and the photogrammetric model of the pit, mine-grid coordinates, data of
-other parts of the pit, and the third-party ADFNE software.

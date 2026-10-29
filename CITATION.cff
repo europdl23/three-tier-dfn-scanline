@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use these data or this code, please cite the paper."
-title: "three-tier-dfn-scanline: code, traced data and trained models for three-tier reconstruction of fracture trace maps from scanline observations"
+message: "If you use these data or this code, please cite the paper (under review)."
+title: "three-tier-dfn-scanline: code, labelled trace data and trained models of the three-tier Hybrid reconstruction of fracture trace networks from scanline observations"
 type: software
-version: "1.0.0"
-date-released: "2026-10-15"
+version: "2.0.0"
+date-released: "2026-10-29"
 repository-code: "https://github.com/europdl23/three-tier-dfn-scanline"
 license:
   - MIT

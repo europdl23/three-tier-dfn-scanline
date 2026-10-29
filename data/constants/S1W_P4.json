@@ -1,0 +1,8 @@
+{
+ "fold": "S1W_P4",
+ "config": "B",
+ "rho": 0.5466009999253787,
+ "obs_crossings": 293,
+ "null_crossings": 536.04,
+ "training_windows": 142
+}

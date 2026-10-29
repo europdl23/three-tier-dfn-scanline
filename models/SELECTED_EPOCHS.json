@@ -1,0 +1,72 @@
+{
+ "selected": {
+  "S1W_P1": {
+   "evae": 45,
+   "head": 3,
+   "tf_latent": 8,
+   "tf_no_latent": 2
+  },
+  "S1W_P2": {
+   "evae": 49,
+   "head": 3,
+   "tf_latent": 7,
+   "tf_no_latent": 7
+  },
+  "S1W_P3": {
+   "evae": 46,
+   "head": 13,
+   "tf_latent": 13,
+   "tf_no_latent": 17
+  },
+  "S1W_P4": {
+   "evae": 42,
+   "head": 4,
+   "tf_latent": 11,
+   "tf_no_latent": 10
+  },
+  "S1W_W04": {
+   "evae": 45,
+   "head": 3,
+   "tf_latent": 9,
+   "tf_no_latent": 9
+  },
+  "S1_EAST": {
+   "evae": 56,
+   "head": 2,
+   "tf_latent": 11,
+   "tf_no_latent": 8
+  },
+  "S1_WEST": {
+   "evae": 39,
+   "head": 3,
+   "tf_latent": 8,
+   "tf_no_latent": 8
+  },
+  "S2_HIGH": {
+   "evae": 32,
+   "head": 2,
+   "tf_latent": 20,
+   "tf_no_latent": 8
+  },
+  "S2_LOW": {
+   "evae": 23,
+   "head": 2,
+   "tf_latent": 19,
+   "tf_no_latent": 14
+  }
+ },
+ "blocks": {
+  "S1W_P1": "S2_LOW",
+  "S1W_P2": "S2_LOW",
+  "S1W_P3": "S2_LOW",
+  "S1W_P4": "S2_LOW",
+  "S1W_W04": "S2_LOW",
+  "S1_EAST": "S2_LOW",
+  "S1_WEST": "S2_LOW",
+  "S2_HIGH": "S2_LOW",
+  "S2_LOW": "S2_HIGH"
+ },
+ "seed": 42001,
+ "rule": "earliest minimum of the inner validation curve (1 block per fold); sequential EVAE -> head -> TF",
+ "utc": "2026-10-28T04:21:05Z"
+}

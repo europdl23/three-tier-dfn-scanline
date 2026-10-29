@@ -1,0 +1,51 @@
+{
+  "job": {
+    "name": "S1W_W04/outer_full/tf_latent_s42001",
+    "component": "tf_latent",
+    "seed": 42001,
+    "mode": "fixed",
+    "epochs": 50,
+    "save_every": true,
+    "evae_state": "<research_root>\\paper2_paper3_section_study\\PAPER2_RETRAIN_AB_2026-10-28\\phase4_training\\B\\runs\\S1W_W04\\outer_full\\evae_s42001\\epoch_045.pt",
+    "head_state": "<research_root>\\paper2_paper3_section_study\\PAPER2_RETRAIN_AB_2026-10-28\\phase4_training\\B\\runs\\S1W_W04\\outer_full\\head_s42001\\epoch_003.pt",
+    "calibrate_epoch": 9
+  },
+  "original_name": "T0_seed42001",
+  "epochs": 50,
+  "lr": 0.0003,
+  "weight_decay": 1e-05,
+  "seed": 42001,
+  "settings": {
+    "weights": {
+      "position": 1.0,
+      "length": 0.5,
+      "angular": 1.5,
+      "family": 1.0,
+      "proportion": 0.3,
+      "crossing": 0.5
+    },
+    "prior": "full_map",
+    "evae_sha": "1f97d83faf67af6c0dbe88d49e05a4d63007345d726d9c9473b604f04d9712d7",
+    "head_sha": "accfbf3443af160b9dc308cf09282ba77267b77660d5619bf9b5e525b3db831c",
+    "batch": 8,
+    "clip": 1,
+    "dropout": 0.1
+  },
+  "initial_state": "ec58843b76ce6f5a6ebec3c185f3338e2f32dec04795c80069c729aee5c364e2",
+  "sources": {
+    "continuity_contract.py": "9971ecdbaff9773ecb7800663e1ceec1f1cfea46495425a856d1e9cc18ec0f13",
+    "experiments.py": "42a762cba10a0c32ab4246992bda8ad8cd6dc90161d47c51f1e8289f27381270",
+    "followup.py": "46900154e3c8024dea4fe5bbd25c7f530b61da75fa1886a285ce3689f17e926d",
+    "runtime.py": "e50ecd7a8a1ac5e13199e1b281c1faff86ad07edd33fa7c769d69f3dc56aaafa",
+    "training.py": "13d5d1572abbfe177dcbed947bf34ccdd0a89057eec7e01da2781a826d464660",
+    "plan_d_train.py": "47e86d712ce9565b38a249c19671b3cde8c382597b6e341a007a55cd004c93b5"
+  },
+  "inputs": {
+    "count_rule_parameters.json": "7795e3d274711b69b018267a50038ae3612eb0a0cb8a56184bb8e7a5afb1078b",
+    "family_fit.json": "432179f47a858c9b16bb078eccda28e74080249f73b46dc4a720f26b8c73f7bc",
+    "run_local_preview.py": "89dc85556fe2113f888a185e3a61c49674bced4ad6ef926b57e9c88a5308365c",
+    "training_only_statistics.json": "b2127f9883d1ba71b552ca6ea513efde0608ace53398b2fcdf159e5a98ed50f4",
+    "window_inventory.csv": "c5065462e445b1f06e7882347b3b8ddeffa0f9ff2ec97f49e5a5eef4708ca089",
+    "window_trace_manifest.csv": "d097a2e84db587ff9de61cff0063b30bd7b5e2898244671704e169c950f54996"
+  }
+}

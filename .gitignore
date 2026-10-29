@@ -1,6 +1,6 @@
 # outputs of reruns
 work/
-study/results/
+work_*/
 # python
 __pycache__/
 *.py[cod]

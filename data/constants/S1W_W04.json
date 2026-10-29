@@ -1,0 +1,8 @@
+{
+ "fold": "S1W_W04",
+ "config": "B",
+ "rho": 0.5770938147380883,
+ "obs_crossings": 273,
+ "null_crossings": 473.05999999999995,
+ "training_windows": 114
+}

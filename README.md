@@ -1,93 +1,128 @@
-# Three-tier reconstruction of fracture trace maps from scanline observations
+# Three-tier reconstruction of fracture trace networks from scanline observations
 
-Code, traced data and trained models of the study:
+Code, labelled trace data and trained models of the study:
 
 > Paudyal E, Tang Y, Lamei Ramandi H, Zhai H, Yang S-Q, Si G. A Three-Tier Evidence Hierarchy with Conditioned Generative Models for Discrete Fracture Network Reconstruction from Scanline Observations. *Journal of Rock Mechanics and Geotechnical Engineering* (under review).
 
-The repository reconstructs two-dimensional fracture trace maps of test windows on a mapped open-pit wall from simulated vertical scanlines. It does this with a three-tier evidence hierarchy and several generators for the unobserved area. It holds:
+The framework reconstructs the two-dimensional fracture trace network of a bench-face window from vertical scanline observations. Every reconstructed trace belongs to one of three evidence tiers:
 
-* the code that produced every reported reconstruction;
-* the traced data and the trained models it uses;
-* one score row for every realisation, plus the reconstructed maps.
+| Tier | Traces | How they are produced |
+|---|---|---|
+| 1 Measured | fracture clips recorded inside the 10 cm scanlines | kept exactly as observed |
+| 2 Indicated | unobserved continuations of the measured clips | continuation length predicted by the enhanced variational autoencoder (EVAE) continuation head |
+| 3 Inferred | traces in the regions that no scanline observes | generated one after another by a sequential autoregressive transformer conditioned on the known traces |
 
-Figure and table plotting code is not included.
+The EVAE (dual spatial and geometric latents, 12 and 20 dimensions, attention pooling) and the transformer together form the **Hybrid framework**. The repository also contains the four compared frameworks of the study, all of which share the same observations, trace count, candidate budget and acceptance rules.
+
+This repository holds code, data and models only. It does not contain manuscript figures or tables, photographs, orthophotos or point clouds, and it contains no plotting or image-processing code: functions of the study code that drew figures or read photographs are replaced by stubs that raise an error if called, and none of them is used by the framework. The geological scorer of earlier versions is present only as dormant code and is not used.
 
 ## Contents
 
 | Folder | What it holds |
 |---|---|
-| `data/box_library/` | The traced data: the fracture traces of the 50 test windows (20 m wide) on seven bench faces, W00 to W06, as two-point lines in window coordinates (LabelMe JSON, 2 cm pixels), and `box_manifest.csv` with the window grid. 735 trace pieces of 629 mapped traces |
-| `data/splits/` | The seven leave-one-bench-out folds (`S2_f0` to `S2_f6`): training, validation and test windows |
-| `data/orientation_clusters/` | The orientation-cluster model of each fold (C1 to C4 and random joints), fitted on the training windows of the fold |
-| `data/observation_errors/` | The pre-computed parameters of the observation-error scenarios |
-| `models/evae/` | The trained enhanced variational autoencoder (EVAE): 7 folds x 3 training runs |
-| `study/tr_models/` | The trained sequential transformer (`gast2_*`) and evidence network (`evn_*`): 7 folds x 3 training runs |
-| `models/termination/` | Termination networks (`term2_*`): 7 folds x 3 training runs |
-| `networks/S2/` | The stored candidate realisations of the EVAE-only, KDE and ADFNE generators (24 per test window) |
-| `src/`, `scripts/` | Trace-map representation, the EVAE (`src/model`, training script `scripts/train_evae.py`), the generators and the error scores (`scripts/statistical_tests.py`) |
-| `study/` | Simulated scanlines, the three evidence tiers, the placement rules, the sequential transformer (`gast.py`, with its training function) and the window runner |
-| `reanalysis/` | Shared composition of generators and rules (`ra01abl_run.py`), model loading (`learned_arm.py`), observation-error scenarios (`ra1417_*.py`) and the paired statistical tests (`protocolP.py`) |
-| `hybrid/` | The hybrid generator (transformer position and cluster, EVAE trace of that cluster, length range) and fitted statistical sampling |
-| `v3/` | The runners of all reported results and `v3patch.py`, the indicated-trace rule (an indicated trace may not reach a scanline that recorded none of its hits) |
-| `results/scores/` | One row per realisation: every generator, scanline layout and test window (gzip-compressed CSV) |
-| `results/realisations/` | The reconstructed maps (`.npz`; key `gt` = mapped traces of the window, `ARM__LAYOUT__rNN` = realisation NN) |
+| `scripts/` | Command-line entry points: `train.py`, `reconstruct.py`, `evaluate.py` |
+| `tests/` | `check_reproduction.py` and the reference hashes of 45 study reconstructions |
+| `dfn3tier/paths.py` | Repository paths; sets the `DFN3_*` environment variables read by the core code |
+| `dfn3tier/core/` | The code of the framework, exactly as it produced the study results (see *Code layout*) |
+| `data/stages/<fold>/` | Labelled traces of each leave-one-wall-out fold: `outer_full` (training windows), `eval` (training and held-out windows), `inner/<block>` (epoch selection) |
+| `data/FOLDS.csv`, `INNER_BLOCKS.csv`, `STAGE_INDEX.csv` | Fold definitions: tested wall group, excluded neighbouring groups that share photographs, training groups and window counts |
+| `data/constants/` | Crossing retention ρ of each fold, calibrated on its training windows |
+| `data/adfne_pools/` | Pre-generated ADFNE candidate traces of the cADFNE benchmark (fitted parameters in `*_params.json`), so that no Octave installation is needed |
+| `models/runs/<fold>/outer_full/` | Trained models of training seed 42001: `evae_s42001`, `head_s42001` (continuation head), `tf_latent_s42001` (Hybrid transformer, with EVAE latent token), `tf_no_latent_s42001` (Transformer-only), with the transformer position residuals (`residuals.npz`, `CALIBRATION.json`) and the training-data references |
+| `models/SELECTED_EPOCHS.json` | The training epoch of each model and fold |
 
-The evidence and termination networks are loaded by the shared model loader. The reported generators do not use their outputs: indicated traces follow the rule of `v3patch.py`, and no termination is applied.
+### Data format
 
-## Names used in the code
+`window_trace_manifest.csv`: one row per trace in a 20 m × 12 m window; `cx`, `cy` (centre), `length` in window units (1 = 20 m), `angle` (radians on the face, 0 horizontal), `boundary_clipped` (the trace was truncated at a window side). `window_inventory.csv`: one row per window with its role (`train`, `validation` = held out), position along the face and height. `training_only_statistics.json`: cluster centres, shares and length and orientation pools fitted on the training windows only.
 
-| Code | In the paper |
-|---|---|
-| `STAT_FIT` | Statistical sampling (reference): fitted von Mises orientation and lognormal length per cluster |
-| `TR_FIT` | Sequential transformer only |
-| `EVAE_F` | EVAE only |
-| `KDE_F`, `ADFNE_F` | KDE, ADFNE |
-| `HYB_FIX2` | Hybrid |
-| `*_noR5` | Without map adjustment |
-| `STAT_FIT_NOSCAN`, `STAT_FIT_FREE` | Statistical sampling without scanlines, with and without the placement rules |
-| `STAT_F` | Statistical sampling with resampled training traces (earlier form, sensitivity check) |
-| R1, R2, R3, R4, R5 | Scanline rule, intensity budget, crossing limit, duplicate removal, map adjustment |
-| `centre`, `10m`, `7m`, `5m`, `3m` | Scanline layouts: one scanline at the window centre, and scanlines 10, 7, 5 and 3 m apart |
-| `S2`, fold 0 to 6 | Leave-one-bench-out validation; fold k tests bench face W0k |
+## Wall groups and validation
 
-## Measures in `results/scores`
+Validation is leave-one-wall-out over nine wall groups; each fold tests one group, and groups that share source photographs with the tested group are excluded from training.
 
-Per realisation:
+| Wall group | G1 | G2 | G3 | G4 | G5 | G6 | G7 | G8 | G9 |
+|---|---|---|---|---|---|---|---|---|---|
+| Fold code | S1W_P1 | S1W_P2 | S1W_P3 | S1W_P4 | S1W_W04 | S1_EAST | S1_WEST | S2_LOW | S2_HIGH |
 
-* **Orientation error:** mean of `oc1_w1_deg` to `oc4_w1_deg`, the first Wasserstein distance of trace orientation in each cluster. Empty values mark clusters with fewer than two traces in the mapped window or the reconstruction.
-* **Trace length error:** mean of `oc1_len_w1_m` to `oc4_len_w1_m`.
-* **Intensity error:** `abs(P21_relerr) x 100`.
-* **Node-type error:** `node_tv`.
+Scanline layout `S10o5`: vertical scanlines 10 cm wide and 10 m apart, the first 5 m from the left window side. Training seed 42001 (the study also trained seeds 42002 and 42003); generation seeds 72001, 72002 and 72003 for every window.
 
-The value of a window is the median over its 24 realisations (3 training runs x 8 draws); reported values are medians over the 50 test windows.
+## Compared frameworks
 
-Files:
+| Option of `reconstruct.py` | Code label | Tier 2 | Tier 3 |
+|---|---|---|---|
+| `hybrid` | `E_hyb@roll1off` | EVAE continuation | transformer with the EVAE latent token |
+| `transformer` | `D_tf@roll1off` | lengths drawn from the training traces of the cluster | transformer without the latent token |
+| `evae` | `V_evae@evaeoff` | EVAE continuation | EVAE decoder |
+| `ckde` | `cKDE@scoreoff` | as Transformer-only | conditioned kernel density estimate of the training traces |
+| `cadfne` | `cADFNE@scoreoff` | as Transformer-only | conditioned ADFNE: Fisher orientation, truncated exponential length |
 
-* `observation_errors_b2` and `observation_errors_b3` hold the single and combined observation-error scenarios.
-* The error-free reference for those scenarios is `stat.csv.gz`.
+`roll1` is the restart sampler of the transformer: the sequence is restarted from the known traces each time the number of traces the window still needs has been generated. The suffix `off` means that the geological scorer of earlier versions is switched off; the scorer is **not** part of the method, and its code is present only because the shared candidate replay still calls it with scoring disabled.
 
-## Reproducing the results
+Shared acceptance rules (no learned component): a candidate is rejected if it leaves the window, crosses a scanline, duplicates an accepted trace, exceeds the share of its cluster in the trace count or lies too close to an accepted trace of the same cluster; a candidate that would cross n accepted traces is retained with probability ρⁿ; collinear segments of one cluster that meet end to end are merged. The trace count of each window comes from a prior-weighted estimator of the scanline intensity.
 
-Python 3.10 or newer with the packages in `requirements.txt`. A CPU is sufficient; no ADFNE or Octave installation is needed, because the ADFNE candidates are stored in `networks/`.
+## Installation
+
+Python 3.10 with the packages in `requirements.txt`. A CUDA GPU reproduces the study networks exactly; a CPU runs everything (see *Reproducibility*).
 
 ```
 pip install -r requirements.txt
-python -B check_reproduction.py            # reruns test window W02_C3 for every run type and compares with results/scores
-python -B v3/run_main_v3.py all 8          # all generators and layouts, 50 windows, 8 processes (output in work/)
-python -B v3/run_noscan_v3.py 8            # statistical sampling without scanlines
-python -B v3/run_obs_v3.py b2 8            # observation errors, single scenarios (b3: combined scenarios)
 ```
 
-Every run uses fixed seeds and reproduces the stored score rows exactly (observation-error runs to within 1e-13). The check script confirms this for one window in a few minutes.
+## Usage
 
-## Not included
+```
+python -B tests/check_reproduction.py                      # 3 windows of G6, 5 frameworks, compared with the study (a few minutes on a GPU)
+python -B scripts/reconstruct.py                           # all frameworks, all 9 wall groups -> work/
+python -B scripts/evaluate.py --work work                  # metrics, wall-group bootstrap, Holm correction, decision rules -> work/results/
+python -B scripts/train.py --folds S1_EAST --work work/models            # retrain the models of one wall group
+python -B scripts/reconstruct.py --models work/models --work work_new    # reconstruct with retrained models
+```
 
-* Photographs, orthoimages and the photogrammetric model of the pit.
-* Mine-grid coordinates. The traced data are in window coordinates.
-* Data of other parts of the pit.
-* The ADFNE 1.5 software (third party). Only its stored candidate realisations are included.
+Options: `--folds S1_EAST,S2_LOW` selects wall groups, `--arms hybrid,ckde` selects frameworks, `--windows N` keeps the first N held-out windows (quick tests), `--training-seed` selects the model seed. `train.py --select` repeats the epoch selection on the inner blocks; `--epochs N` is for smoke tests only.
 
-## Licence
+### Outputs
 
-* **Code:** MIT (`LICENSE`).
-* **Traced data, trained models, stored realisations and result tables:** CC BY 4.0 (`LICENSE-DATA`).
+`reconstruct.py` writes one folder per window, framework and generation seed under `work/<tag>/B/runs/<fold>/S10o5/S10o5_<tag>/cases/`. `predictions.csv` lists the reconstructed traces (`cx`, `cy`, `length`, `angle`, and `inferred` = Tier 3; Tier 1 and 2 traces have `inferred` False); `metrics.json`, `proposal_ledger.csv.gz` and `raw_candidates.csv.gz` record the per-case scores, every candidate decision and the candidate pool.
+
+`evaluate.py` writes `UNITS.csv` (one row per window and framework), `MEANS.csv`, `FOLD_MEANS.csv` (per wall group), `TIER2.csv` and `TIER2_FOLD_MEANS.csv` (Tier 2 continuation error), `CONTRASTS.csv`, `COUNTS.csv` and `RULES.csv`.
+
+## Metrics and statistics
+
+16 primary metrics in five groups, computed per reconstruction against the mapped traces of the window:
+
+* **Orientation:** cluster-share distance including the random joints; mean-direction error and angular dispersion of clusters C1 to C3.
+* **Length:** 1-Wasserstein distance of log trace length and long-trace tail (90th percentile) error of C1 to C3.
+* **Intensity:** P21 error; local P21 on 5 m cells and its heterogeneity.
+* **Spatial arrangement:** energy distance of trace centres (unbiased estimate, can be negative); occupancy of 5 m cells; spacing of each cluster.
+* **Topology:** crossing density; I, Y and X node shares; number of connected components; largest connected cluster; top-to-bottom spanning.
+
+Paired differences per window are tested with a bootstrap that resamples whole wall groups (2000 draws, seeded from the data), Holm-corrected over the 16 metrics. A difference is supported when the corrected p < 0.05, it has the same direction in at least six of the nine wall groups and it changes the error by at least 3% (no percentage threshold for the position energy distance).
+
+## Training settings
+
+| Model | Epochs | Learning rate | Batch | Other |
+|---|---|---|---|---|
+| EVAE | selected by inner validation, cap 150 | 3 × 10⁻⁴ | 8 | Kullback-Leibler weight β rising from 0 to 0.001 over 50 epochs, free bits 0.1, gradient clip 1 |
+| Continuation head | 50 (selected epoch used) | 10⁻³ | 8 | trained on the frozen EVAE |
+| Transformers | 50 (selected epoch used) | 3 × 10⁻⁴ | 8 | dropout 0.1, gradient clip 1; position residuals calibrated at the selected epoch |
+
+Adam optimiser with weight decay 10⁻⁵ for all models; every model is trained on the training windows of its fold only. Epochs are the earliest minimum of the validation curve on the inner block of the fold (`train.py --select`).
+
+## Reproducibility
+
+`tests/check_reproduction.py` reproduces the study networks bit for bit on a CUDA GPU (verified for all 45 reference cases), and `train.py` reproduces the study training exactly for the same inputs and epochs. `evaluate.py` applied to the study reconstructions gives the same metric values and the same supported and unsupported differences as the study. The bootstrap seed is derived from the bytes of the paired differences, so individual p-values can change slightly with the floating-point path while the support decisions remain the same. On a CPU, cKDE and cADFNE are identical; the learned frameworks give different but equally valid draws.
+
+## Code layout
+
+`dfn3tier/core/` keeps the folder structure in which the study was run, because the code locates its modules relative to that structure and adds the final settings to earlier modules by exact, assert-checked text substitution. The main entry files are:
+
+* `PAPER2_RETRAIN_AB_2026-10-28/phase7_followup/fbench_v3.py`: reconstruction of Hybrid, Transformer-only, cKDE and cADFNE (restart sampler `V3_ROLL`, scorer switch `V3_SCORING`), built on `phase5_eval/fbench_v2.py`, `topo_v2.py` and `pde_v2.py`;
+* `PAPER2_RETRAIN_AB_2026-10-28/phase10_ablation/fbench_v10.py`: EVAE-only (EVAE decoder for Tier 3);
+* `plan_d_step3_training_evaluation_2026-10-21/plan_d_train.py` and `engine/training.py`: training of the EVAE, continuation head and transformers;
+* `PAPER2_RETRAIN_AB_2026-10-28/phase6_analysis/analysis_v2.py`, `phase9_spatial/phase9_analysis.py` and `PAPER2_DFN_GEOLOGICAL_SIMILARITY_AUDIT_2026-10-27/geo_metrics.py`: metrics and statistics;
+* `Updated__file/improved_dfn_experiments/`: the EVAE (`model_v4.py`), transformer (`transformer_v4.py`) and continuation rules (`hybrid_v6.py`) on which the engine builds.
+
+Changes from the study code are limited to absolute paths of the research machine, which now come from `dfn3tier/paths.py`, the ADFNE pools being read as compressed files, the analysis reading the data folder, the removal of the file-access guards used during the study, and the stubbing of plotting and image-processing functions together with their matplotlib, OpenCV and Pillow imports.
+
+## Licence and citation
+
+Code: MIT (`LICENSE`). Data and trained models: CC BY 4.0 (`LICENSE-DATA`). Please cite the paper (`CITATION.cff`).
