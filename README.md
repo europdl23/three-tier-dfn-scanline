@@ -76,7 +76,7 @@ pip install -r requirements.txt
 ```
 python -B tests/check_reproduction.py                      # 3 windows of G6, 5 frameworks, compared with the study (a few minutes on a GPU)
 python -B scripts/reconstruct.py                           # all frameworks, all 9 wall groups -> work/
-python -B scripts/evaluate.py --work work                  # metrics, wall-group bootstrap, Holm correction, decision rules -> work/results/
+python -B scripts/evaluate.py --work work                  # per-window metrics (and an earlier bootstrap analysis) -> work/results/
 python -B scripts/train.py --folds S1_EAST --work work/models            # retrain the models of one wall group
 python -B scripts/reconstruct.py --models work/models --work work_new    # reconstruct with retrained models
 ```
@@ -91,15 +91,17 @@ Options: `--folds S1_EAST,S2_LOW` selects wall groups, `--arms hybrid,ckde` sele
 
 ## Metrics and statistics
 
-16 primary metrics in five groups, computed per reconstruction against the mapped traces of the window:
+The paper reports 15 metrics in five groups, computed per reconstruction against the mapped traces of the window (definitions: Supplementary Table S4 of the paper):
 
-* **Orientation:** cluster-share distance including the random joints; mean-direction error and angular dispersion of clusters C1 to C3.
-* **Length:** 1-Wasserstein distance of log trace length and long-trace tail (90th percentile) error of C1 to C3.
-* **Intensity:** P21 error; local P21 on 5 m cells and its heterogeneity.
-* **Spatial arrangement:** energy distance of trace centres (unbiased estimate, can be negative); occupancy of 5 m cells; spacing of each cluster.
-* **Topology:** crossing density; I, Y and X node shares; number of connected components; largest connected cluster; top-to-bottom spanning.
+* **Orientation:** cluster shares (including the random joints C4); orientation error and orientation dispersion of clusters C1 to C3.
+* **Length:** trace length (1-Wasserstein distance of log trace length) and long-trace length (90th percentile) error of C1 to C3.
+* **Intensity:** P21 error; local P21 on 5 m × 6 m cells and its spatial heterogeneity.
+* **Spatial arrangement:** cell coverage (fraction of 5 m × 6 m cells containing traces); spacing of each cluster.
+* **Topology:** intersection density; I, Y and X node types; number of connected components; largest connected component; top-to-bottom connectivity.
 
-Paired differences per window are tested with a bootstrap that resamples whole wall groups (2000 draws, seeded from the data), Holm-corrected over the 16 metrics. A difference is supported when the corrected p < 0.05, it has the same direction in at least six of the nine wall groups and it changes the error by at least 3% (no percentage threshold for the position energy distance).
+Statistics of the paper: for every framework, metric and wall group, errors are averaged over windows and generation seeds and then over the three training seeds, giving nine paired wall-group means per comparison. Differences are tested with paired two-sided t-tests (n = 9), with Holm correction over the 15 metrics (or over the three Tier 3 inferred-trace measures) within each comparison; the Tier 2 continuation error is a single unadjusted test. The result tables are in `results/` and the scripts that computed them in `results/scripts/` (`ttest_analysis.py`, `tier3_analysis.py`, `tier3only.py`, `unseen_bench_analysis.py`, and `recompute_15.py`, which applies the Holm correction over the 15 metrics; their paths refer to the study workstation).
+
+`evaluate.py` computes the per-window metric values used by these tests. It also writes an energy distance of trace-centre positions, which is not part of the 15 metrics of the paper, and an earlier wall-group bootstrap with decision rules, which the paper does not use.
 
 ## Training settings
 
@@ -113,7 +115,7 @@ Adam optimiser with weight decay 10⁻⁵ for all models; every model is trained
 
 ## Reproducibility
 
-`tests/check_reproduction.py` reproduces the study networks bit for bit on a CUDA GPU (verified for all 45 reference cases), and `train.py` reproduces the study training exactly for the same inputs and epochs. `evaluate.py` applied to the study reconstructions gives the same metric values and the same supported and unsupported differences as the study. The bootstrap seed is derived from the bytes of the paired differences, so individual p-values can change slightly with the floating-point path while the support decisions remain the same. On a CPU, cKDE and cADFNE are identical; the learned frameworks give different but equally valid draws.
+`tests/check_reproduction.py` reproduces the study networks bit for bit on a CUDA GPU (verified for all 45 reference cases), and `train.py` reproduces the study training exactly for the same inputs and epochs. `evaluate.py` applied to the study reconstructions gives the same metric values as the study. On a CPU, cKDE and cADFNE are identical; the learned frameworks give different but equally valid draws.
 
 ## Code layout
 
