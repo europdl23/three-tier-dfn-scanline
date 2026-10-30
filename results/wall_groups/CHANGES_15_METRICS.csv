@@ -1,0 +1,151 @@
+table,comparison,metric,p,p_holm_16,p_holm_15
+TTEST,Hybrid vs EVAE-only,cluster_share_TV,0.0595905700487467,0.6554962705362144,0.5959057004874669
+TTEST,Hybrid vs EVAE-only,mean_dir_err_deg,0.6579578396314951,1.0,1.0
+TTEST,Hybrid vs EVAE-only,abs_R_diff,0.922658539084518,1.0,1.0
+TTEST,Hybrid vs EVAE-only,loglen_W1_cluster,0.0225460003930921,0.3156440055032899,0.2930980051101973
+TTEST,Hybrid vs EVAE-only,abs_P90_logratio_cluster,0.0318965245892618,0.3827582950711419,0.35086177048187983
+TTEST,Hybrid vs EVAE-only,P21_rel_err_pct,0.302976228032436,1.0,1.0
+TTEST,Hybrid vs EVAE-only,localP21_W1,0.8163255003747172,1.0,1.0
+TTEST,Hybrid vs EVAE-only,abs_localP21_CV_diff,0.4191856536167518,1.0,1.0
+TTEST,Hybrid vs EVAE-only,abs_occupancy_diff,0.3507684991928387,1.0,1.0
+TTEST,Hybrid vs EVAE-only,spacing_logW1,0.3360367643121937,1.0,1.0
+TTEST,Hybrid vs EVAE-only,crossing_density_abs,0.0126714300008038,0.2027428800128613,0.190071450012057
+TTEST,Hybrid vs EVAE-only,node_IYX_TV,0.0691804503484518,0.6918045034845188,0.6226240531360662
+TTEST,Hybrid vs EVAE-only,components_rel_err,0.0231050392195123,0.3156440055032899,0.2930980051101973
+TTEST,Hybrid vs EVAE-only,largest_fraction_err,0.016361564811188,0.24542347216782,0.229061907356632
+TTEST,Hybrid vs EVAE-only,spanning_mismatch,0.0707078657480143,0.6918045034845188,0.6226240531360662
+TTEST,Hybrid vs Transformer-only,cluster_share_TV,0.5773313292908178,1.0,1.0
+TTEST,Hybrid vs Transformer-only,mean_dir_err_deg,0.8065194159164337,1.0,1.0
+TTEST,Hybrid vs Transformer-only,abs_R_diff,0.8045509826518009,1.0,1.0
+TTEST,Hybrid vs Transformer-only,loglen_W1_cluster,0.0614085500060887,0.7983111500791543,0.7369026000730644
+TTEST,Hybrid vs Transformer-only,abs_P90_logratio_cluster,0.1216104980262062,1.0,1.0
+TTEST,Hybrid vs Transformer-only,P21_rel_err_pct,0.5059084067083597,1.0,1.0
+TTEST,Hybrid vs Transformer-only,localP21_W1,0.3089626181515545,1.0,1.0
+TTEST,Hybrid vs Transformer-only,abs_localP21_CV_diff,0.2473917761528008,1.0,1.0
+TTEST,Hybrid vs Transformer-only,abs_occupancy_diff,0.9299898598638848,1.0,1.0
+TTEST,Hybrid vs Transformer-only,spacing_logW1,0.6814899670485582,1.0,1.0
+TTEST,Hybrid vs Transformer-only,crossing_density_abs,0.0329778986410938,0.494668479616407,0.46169058097531324
+TTEST,Hybrid vs Transformer-only,node_IYX_TV,0.3285397367117835,1.0,1.0
+TTEST,Hybrid vs Transformer-only,components_rel_err,0.0290420898684918,0.4646734378958702,0.435631348027377
+TTEST,Hybrid vs Transformer-only,largest_fraction_err,0.5227424479107117,1.0,1.0
+TTEST,Hybrid vs Transformer-only,spanning_mismatch,0.0372173235122185,0.5210425291710602,0.4838252056588405
+TTEST,Hybrid vs cADFNE,cluster_share_TV,0.0030456901920012,0.0487310430720197,0.045685352880018
+TTEST,Hybrid vs cADFNE,mean_dir_err_deg,0.5669215959155507,1.0,1.0
+TTEST,Hybrid vs cADFNE,abs_R_diff,0.6724235220815029,1.0,1.0
+TTEST,Hybrid vs cADFNE,loglen_W1_cluster,0.0049621031504742,0.0744315472571142,0.0694694441066388
+TTEST,Hybrid vs cADFNE,abs_P90_logratio_cluster,0.7579462638092985,1.0,1.0
+TTEST,Hybrid vs cADFNE,P21_rel_err_pct,0.1586173819405624,1.0,1.0
+TTEST,Hybrid vs cADFNE,localP21_W1,0.0127163414934076,0.1780287809077075,0.1653124394142988
+TTEST,Hybrid vs cADFNE,abs_localP21_CV_diff,0.0354581223998496,0.3900393463983463,0.3900393463983456
+TTEST,Hybrid vs cADFNE,abs_occupancy_diff,0.1740246602972263,1.0,1.0
+TTEST,Hybrid vs cADFNE,spacing_logW1,0.8212407243105343,1.0,1.0
+TTEST,Hybrid vs cADFNE,crossing_density_abs,0.3489922785712162,1.0,1.0
+TTEST,Hybrid vs cADFNE,node_IYX_TV,0.2763781079307023,1.0,1.0
+TTEST,Hybrid vs cADFNE,components_rel_err,0.186122609820702,1.0,1.0
+TTEST,Hybrid vs cADFNE,largest_fraction_err,0.768603289325305,1.0,1.0
+TTEST,Hybrid vs cADFNE,spanning_mismatch,0.0147310553800819,0.1915037199410659,0.17677266456098278
+TTEST,Hybrid vs cKDE,cluster_share_TV,0.0154714714554438,0.2011291289207699,0.2011291289207694
+TTEST,Hybrid vs cKDE,mean_dir_err_deg,0.6248309118018067,1.0,1.0
+TTEST,Hybrid vs cKDE,abs_R_diff,0.089024236714426,0.8902423671442601,0.89024236714426
+TTEST,Hybrid vs cKDE,loglen_W1_cluster,0.2395194686444634,1.0,1.0
+TTEST,Hybrid vs cKDE,abs_P90_logratio_cluster,0.335221669543683,1.0,1.0
+TTEST,Hybrid vs cKDE,P21_rel_err_pct,0.1986300915746378,1.0,1.0
+TTEST,Hybrid vs cKDE,localP21_W1,0.2606637886543098,1.0,1.0
+TTEST,Hybrid vs cKDE,abs_localP21_CV_diff,0.0317808266368472,0.3495890930053201,0.34958909300531915
+TTEST,Hybrid vs cKDE,abs_occupancy_diff,0.0022147585373272,0.033221378059908,0.031006619522580797
+TTEST,Hybrid vs cKDE,spacing_logW1,0.4810509551755467,1.0,1.0
+TTEST,Hybrid vs cKDE,crossing_density_abs,0.2458713358860584,1.0,1.0
+TTEST,Hybrid vs cKDE,node_IYX_TV,0.001255130512022,0.0200820881923534,0.01882695768033
+TTEST,Hybrid vs cKDE,components_rel_err,0.0951526081246245,0.8902423671442601,0.89024236714426
+TTEST,Hybrid vs cKDE,largest_fraction_err,0.0991477832026696,0.8902423671442601,0.89024236714426
+TTEST,Hybrid vs cKDE,spanning_mismatch,0.0205440761703216,0.2465289140438601,0.24652891404385918
+TIER3,Transformer-only vs cKDE,cluster_share_TV,0.1592986225743365,1.0,1.0
+TIER3,Transformer-only vs cKDE,mean_dir_err_deg,0.2946509961070839,1.0,1.0
+TIER3,Transformer-only vs cKDE,abs_R_diff,0.0354388287169976,0.3898271158869737,0.354388287169976
+TIER3,Transformer-only vs cKDE,loglen_W1_cluster,0.0107963148708464,0.1403520933210032,0.1295557784501568
+TIER3,Transformer-only vs cKDE,abs_P90_logratio_cluster,0.7109309857062664,1.0,1.0
+TIER3,Transformer-only vs cKDE,P21_rel_err_pct,0.3684011588826731,1.0,1.0
+TIER3,Transformer-only vs cKDE,localP21_W1,0.8156973581061238,1.0,1.0
+TIER3,Transformer-only vs cKDE,abs_localP21_CV_diff,0.0456824592114616,0.4568245921146169,0.4111421329031544
+TIER3,Transformer-only vs cKDE,abs_occupancy_diff,0.0035187036527596,0.0527805547913941,0.0492618511386344
+TIER3,Transformer-only vs cKDE,spacing_logW1,0.5780359868197744,1.0,1.0
+TIER3,Transformer-only vs cKDE,crossing_density_abs,0.0061821060595079,0.0865494848331117,0.0803673787736027
+TIER3,Transformer-only vs cKDE,node_IYX_TV,0.000417597701224,0.0066815632195842,0.00626396551836
+TIER3,Transformer-only vs cKDE,components_rel_err,0.9975406467019292,1.0,1.0
+TIER3,Transformer-only vs cKDE,largest_fraction_err,0.1669299382535559,1.0,1.0
+TIER3,Transformer-only vs cKDE,spanning_mismatch,0.0303090490309049,0.3637085883708599,0.3333995393399539
+TIER3,Transformer-only vs cADFNE,cluster_share_TV,0.0054684964889315,0.0820274473339739,0.076558950845041
+TIER3,Transformer-only vs cADFNE,mean_dir_err_deg,0.3532195909870724,1.0,1.0
+TIER3,Transformer-only vs cADFNE,abs_R_diff,0.75278761753712,1.0,1.0
+TIER3,Transformer-only vs cADFNE,loglen_W1_cluster,0.001086543389216,0.0173846942274571,0.016298150838240003
+TIER3,Transformer-only vs cADFNE,abs_P90_logratio_cluster,0.4135311641779678,1.0,1.0
+TIER3,Transformer-only vs cADFNE,P21_rel_err_pct,0.1329844973433777,1.0,1.0
+TIER3,Transformer-only vs cADFNE,localP21_W1,0.0248800944765735,0.3483213226720296,0.3234412281954555
+TIER3,Transformer-only vs cADFNE,abs_localP21_CV_diff,0.4363629196044092,1.0,1.0
+TIER3,Transformer-only vs cADFNE,abs_occupancy_diff,0.2667390458105591,1.0,1.0
+TIER3,Transformer-only vs cADFNE,spacing_logW1,0.9971331752573592,1.0,1.0
+TIER3,Transformer-only vs cADFNE,crossing_density_abs,0.6313771057799921,1.0,1.0
+TIER3,Transformer-only vs cADFNE,node_IYX_TV,0.7255549761203611,1.0,1.0
+TIER3,Transformer-only vs cADFNE,components_rel_err,0.9002109288619773,1.0,1.0
+TIER3,Transformer-only vs cADFNE,largest_fraction_err,0.4000387817286825,1.0,1.0
+TIER3,Transformer-only vs cADFNE,spanning_mismatch,0.3451941154831187,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,cluster_share_TV,0.1016939097496321,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,mean_dir_err_deg,0.0914461313298501,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,abs_R_diff,0.3476829080792092,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,loglen_W1_cluster,0.0537428926151999,0.8598862818431985,0.8061433892279984
+S8,Tier3_Transformer_vs_cKDE,abs_P90_logratio_cluster,0.8331744059652972,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,P21_rel_err_pct,0.9043543045490314,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,localP21_W1,0.2604526108001256,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,abs_localP21_CV_diff,0.8322021799937335,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,abs_occupancy_diff,0.0703431621423992,1.0,0.9848042699935888
+S8,Tier3_Transformer_vs_cKDE,spacing_logW1,0.8479444989771119,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,crossing_density_abs,0.1579052965094879,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,node_IYX_TV,0.6245716771848009,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,components_rel_err,0.706113988676768,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,largest_fraction_err,0.9079084670371944,1.0,1.0
+S8,Tier3_Transformer_vs_cKDE,spanning_mismatch,0.729511775553222,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,cluster_share_TV,0.1894999033044509,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,mean_dir_err_deg,0.1845996821112707,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,abs_R_diff,0.777856607907675,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,loglen_W1_cluster,0.0730373251234113,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,abs_P90_logratio_cluster,0.797877863140646,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,P21_rel_err_pct,0.9374068761883552,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,localP21_W1,0.8935951928615078,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,abs_localP21_CV_diff,0.6994279118402781,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,abs_occupancy_diff,0.7324521475166667,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,spacing_logW1,0.7800042095845563,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,crossing_density_abs,0.121514297383913,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,node_IYX_TV,0.1059765102644014,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,components_rel_err,0.1361290653682731,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,largest_fraction_err,0.7374113866732688,1.0,1.0
+S8,Tier3_Transformer_vs_cADFNE,spanning_mismatch,0.8385094067528727,1.0,1.0
+S8,Hybrid_vs_cKDE,cluster_share_TV,0.1459935964909651,1.0,1.0
+S8,Hybrid_vs_cKDE,mean_dir_err_deg,0.1857670043277695,1.0,1.0
+S8,Hybrid_vs_cKDE,abs_R_diff,0.5711707935904156,1.0,1.0
+S8,Hybrid_vs_cKDE,loglen_W1_cluster,0.5451804584314934,1.0,1.0
+S8,Hybrid_vs_cKDE,abs_P90_logratio_cluster,0.1229403102762343,1.0,1.0
+S8,Hybrid_vs_cKDE,P21_rel_err_pct,0.1253815068088941,1.0,1.0
+S8,Hybrid_vs_cKDE,localP21_W1,0.054626110444887,0.8740177671181935,0.819391656673305
+S8,Hybrid_vs_cKDE,abs_localP21_CV_diff,0.7397121667531097,1.0,1.0
+S8,Hybrid_vs_cKDE,abs_occupancy_diff,0.2414341982711959,1.0,1.0
+S8,Hybrid_vs_cKDE,spacing_logW1,0.177399467964916,1.0,1.0
+S8,Hybrid_vs_cKDE,crossing_density_abs,0.3581653625097167,1.0,1.0
+S8,Hybrid_vs_cKDE,node_IYX_TV,0.7524656806060288,1.0,1.0
+S8,Hybrid_vs_cKDE,components_rel_err,0.6465007527851365,1.0,1.0
+S8,Hybrid_vs_cKDE,largest_fraction_err,0.6317915263398362,1.0,1.0
+S8,Hybrid_vs_cKDE,spanning_mismatch,0.9127320090200248,1.0,1.0
+S8,Hybrid_vs_cADFNE,cluster_share_TV,0.1900624125643725,1.0,1.0
+S8,Hybrid_vs_cADFNE,mean_dir_err_deg,0.4057574974064855,1.0,1.0
+S8,Hybrid_vs_cADFNE,abs_R_diff,0.8999226441912125,1.0,1.0
+S8,Hybrid_vs_cADFNE,loglen_W1_cluster,0.7082001027064433,1.0,1.0
+S8,Hybrid_vs_cADFNE,abs_P90_logratio_cluster,0.108158656563898,1.0,1.0
+S8,Hybrid_vs_cADFNE,P21_rel_err_pct,0.2634178102180272,1.0,1.0
+S8,Hybrid_vs_cADFNE,localP21_W1,0.3021826980098955,1.0,1.0
+S8,Hybrid_vs_cADFNE,abs_localP21_CV_diff,0.3694665570574658,1.0,1.0
+S8,Hybrid_vs_cADFNE,abs_occupancy_diff,0.7832641487229435,1.0,1.0
+S8,Hybrid_vs_cADFNE,spacing_logW1,0.3368105507421119,1.0,1.0
+S8,Hybrid_vs_cADFNE,crossing_density_abs,0.0801774248454132,1.0,1.0
+S8,Hybrid_vs_cADFNE,node_IYX_TV,0.0976316408088616,1.0,1.0
+S8,Hybrid_vs_cADFNE,components_rel_err,0.1688587794698251,1.0,1.0
+S8,Hybrid_vs_cADFNE,largest_fraction_err,0.4832091305419178,1.0,1.0
+S8,Hybrid_vs_cADFNE,spanning_mismatch,0.9552361676684438,1.0,1.0

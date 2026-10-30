@@ -1,0 +1,10 @@
+{
+  "epoch": 8,
+  "horizons": {
+    "centre": 24,
+    "5m": 18
+  },
+  "residual_sha": "62b9a86c290864a0ecdcbe201626a17a4f40e4b67067d44bbb1eb20e2c48133a",
+  "latent": false,
+  "note": "teacher-forced position residuals on the stage training sequences only (engine.calibrate)"
+}

@@ -1,0 +1,51 @@
+{
+  "job": {
+    "name": "S2_HIGH/outer_full/tf_latent_s42002",
+    "component": "tf_latent",
+    "seed": 42002,
+    "mode": "fixed",
+    "epochs": 50,
+    "save_every": true,
+    "evae_state": "C:\\Europe_files\\EVAE_Training\\paper2_paper3_section_study\\PAPER2_RETRAIN_AB_2026-10-28\\phase4_training\\B\\runs\\S2_HIGH\\outer_full\\evae_s42002\\epoch_032.pt",
+    "head_state": "C:\\Europe_files\\EVAE_Training\\paper2_paper3_section_study\\PAPER2_RETRAIN_AB_2026-10-28\\phase4_training\\B\\runs\\S2_HIGH\\outer_full\\head_s42002\\epoch_002.pt",
+    "calibrate_epoch": 20
+  },
+  "original_name": "T0_seed42002",
+  "epochs": 50,
+  "lr": 0.0003,
+  "weight_decay": 1e-05,
+  "seed": 42002,
+  "settings": {
+    "weights": {
+      "position": 1.0,
+      "length": 0.5,
+      "angular": 1.5,
+      "family": 1.0,
+      "proportion": 0.3,
+      "crossing": 0.5
+    },
+    "prior": "full_map",
+    "evae_sha": "e0e61e3ffa2fabbc69ab314df6bc807f0ddf87c2fac75ee05e28f5e76007f188",
+    "head_sha": "3642fa6769662b0e0fddc2127214ae9a2393129e4205c095e2a38bc568692b44",
+    "batch": 8,
+    "clip": 1,
+    "dropout": 0.1
+  },
+  "initial_state": "799b43450079068281f35e95fa3cc3b47c0cc68fe4dc93ce8645384fc7b43882",
+  "sources": {
+    "continuity_contract.py": "9971ecdbaff9773ecb7800663e1ceec1f1cfea46495425a856d1e9cc18ec0f13",
+    "experiments.py": "42a762cba10a0c32ab4246992bda8ad8cd6dc90161d47c51f1e8289f27381270",
+    "followup.py": "46900154e3c8024dea4fe5bbd25c7f530b61da75fa1886a285ce3689f17e926d",
+    "runtime.py": "e50ecd7a8a1ac5e13199e1b281c1faff86ad07edd33fa7c769d69f3dc56aaafa",
+    "training.py": "13d5d1572abbfe177dcbed947bf34ccdd0a89057eec7e01da2781a826d464660",
+    "plan_d_train.py": "47e86d712ce9565b38a249c19671b3cde8c382597b6e341a007a55cd004c93b5"
+  },
+  "inputs": {
+    "count_rule_parameters.json": "db0e8e8ca4702af885921bdf7348fb2f0aac4aafdd6f7896917010f1c2193eb4",
+    "family_fit.json": "a1160b50d5e9b75bbc25fa769fc9f01ab5b4d5877112cbc4b0bfca59828ff62d",
+    "run_local_preview.py": "89dc85556fe2113f888a185e3a61c49674bced4ad6ef926b57e9c88a5308365c",
+    "training_only_statistics.json": "2f31fdf365c3e438ac718a52b0b7ceaa4fa222ba94befd4e1cf784de18c4e9f5",
+    "window_inventory.csv": "873913f324e16047d81923767b9f7617170f08c7cb85a83ef9cf0efb447e4ac5",
+    "window_trace_manifest.csv": "f5749aa91fa7e02f424f5d79469ae12fd7bc506454252e4875ab16470efac8a8"
+  }
+}

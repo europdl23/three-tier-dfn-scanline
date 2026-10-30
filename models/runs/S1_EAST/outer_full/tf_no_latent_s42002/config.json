@@ -1,0 +1,51 @@
+{
+  "job": {
+    "name": "S1_EAST/outer_full/tf_no_latent_s42002",
+    "component": "tf_no_latent",
+    "seed": 42002,
+    "mode": "fixed",
+    "epochs": 50,
+    "save_every": true,
+    "evae_state": "C:\\Europe_files\\EVAE_Training\\paper2_paper3_section_study\\PAPER2_RETRAIN_AB_2026-10-28\\phase4_training\\B\\runs\\S1_EAST\\outer_full\\evae_s42002\\epoch_056.pt",
+    "head_state": "C:\\Europe_files\\EVAE_Training\\paper2_paper3_section_study\\PAPER2_RETRAIN_AB_2026-10-28\\phase4_training\\B\\runs\\S1_EAST\\outer_full\\head_s42002\\epoch_002.pt",
+    "calibrate_epoch": 8
+  },
+  "original_name": "T0_seed42002",
+  "epochs": 50,
+  "lr": 0.0003,
+  "weight_decay": 1e-05,
+  "seed": 42002,
+  "settings": {
+    "weights": {
+      "position": 1.0,
+      "length": 0.5,
+      "angular": 1.5,
+      "family": 1.0,
+      "proportion": 0.3,
+      "crossing": 0.5
+    },
+    "prior": "full_map",
+    "evae_sha": "06655d3adde9368bb4f3b2ee74667d79fd761e9250c25a9e482df1c7eb0ab9dd",
+    "head_sha": "f105b5228becb02930e1bba52b21553be97c8bd086fd3a003d21fc546848770e",
+    "batch": 8,
+    "clip": 1,
+    "dropout": 0.1
+  },
+  "initial_state": "799b43450079068281f35e95fa3cc3b47c0cc68fe4dc93ce8645384fc7b43882",
+  "sources": {
+    "continuity_contract.py": "9971ecdbaff9773ecb7800663e1ceec1f1cfea46495425a856d1e9cc18ec0f13",
+    "experiments.py": "42a762cba10a0c32ab4246992bda8ad8cd6dc90161d47c51f1e8289f27381270",
+    "followup.py": "46900154e3c8024dea4fe5bbd25c7f530b61da75fa1886a285ce3689f17e926d",
+    "runtime.py": "e50ecd7a8a1ac5e13199e1b281c1faff86ad07edd33fa7c769d69f3dc56aaafa",
+    "training.py": "13d5d1572abbfe177dcbed947bf34ccdd0a89057eec7e01da2781a826d464660",
+    "plan_d_train.py": "47e86d712ce9565b38a249c19671b3cde8c382597b6e341a007a55cd004c93b5"
+  },
+  "inputs": {
+    "count_rule_parameters.json": "55b104f3ac1999f43bab937b0db6d257a47ff042644a95c23464f8f580750313",
+    "family_fit.json": "8633be32ad2ff23c21d193059b75b5496c31fb93adfd7936052e08ba6c367d94",
+    "run_local_preview.py": "89dc85556fe2113f888a185e3a61c49674bced4ad6ef926b57e9c88a5308365c",
+    "training_only_statistics.json": "2c9e17412166d8ea2b362ad7c7b45c887665544a218f091c478cf3c6f2f51f46",
+    "window_inventory.csv": "2635cf9ecff95c17ca63910359102ecde5c6afbda43ab3e52669019383892f83",
+    "window_trace_manifest.csv": "5aac083664109118159990aed30d09d7d6026c55f2cdb85c4a964cc0a79bfabb"
+  }
+}

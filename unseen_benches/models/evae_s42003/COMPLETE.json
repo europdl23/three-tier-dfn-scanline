@@ -1,0 +1,13 @@
+{
+  "job": "S8/outer_full/evae_s42003",
+  "mode": "fixed",
+  "epochs": 45,
+  "selected_epoch_within_run": null,
+  "best_validation": null,
+  "final_state_sha": "8071c7ec7119e06441cf1c71a8d1abd5fa8916e17f4ef4503e476f9f26714ddd",
+  "checkpoint_sha": {
+    "0": "5f4458ca676f806c26336bee788df75f760692e0f6a33fa9bf947cdcaa33cb36",
+    "45": "2794d6687935e561956a50952e6a9ea6ba165104a5abe0bf50ad7ad25f019822"
+  },
+  "elapsed_s": 221.06300000008196
+}

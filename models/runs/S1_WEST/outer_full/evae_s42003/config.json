@@ -1,0 +1,42 @@
+{
+  "job": {
+    "name": "S1_WEST/outer_full/evae_s42003",
+    "component": "evae",
+    "seed": 42003,
+    "mode": "fixed",
+    "epochs": 39,
+    "save_every": false
+  },
+  "original_name": "E_LB_seed42003",
+  "epochs": 39,
+  "lr": 0.0003,
+  "weight_decay": 1e-05,
+  "seed": 42003,
+  "settings": {
+    "length_support": true,
+    "background": true,
+    "loss_source_sha": "a1d4b83d63d00630bb46577f37f72c2cbf7001e67a355a8d26d3eef9a63df70f",
+    "beta_max": 0.001,
+    "anneal": 50,
+    "freebits": 0.1,
+    "batch": 8,
+    "clip": 1
+  },
+  "initial_state": "ef2f179553e6b8a1f21b73261b6fe5800746d6828fba61272b7499233ca2487a",
+  "sources": {
+    "continuity_contract.py": "9971ecdbaff9773ecb7800663e1ceec1f1cfea46495425a856d1e9cc18ec0f13",
+    "experiments.py": "42a762cba10a0c32ab4246992bda8ad8cd6dc90161d47c51f1e8289f27381270",
+    "followup.py": "46900154e3c8024dea4fe5bbd25c7f530b61da75fa1886a285ce3689f17e926d",
+    "runtime.py": "e50ecd7a8a1ac5e13199e1b281c1faff86ad07edd33fa7c769d69f3dc56aaafa",
+    "training.py": "13d5d1572abbfe177dcbed947bf34ccdd0a89057eec7e01da2781a826d464660",
+    "plan_d_train.py": "47e86d712ce9565b38a249c19671b3cde8c382597b6e341a007a55cd004c93b5"
+  },
+  "inputs": {
+    "count_rule_parameters.json": "4f62117004c92670f85015a2a944bd0dbc1fe454bdace59a92634a988bc5c473",
+    "family_fit.json": "09419efe3de705378fd374017638548cee83ea9e8818c43b20d05804cf8089e7",
+    "run_local_preview.py": "89dc85556fe2113f888a185e3a61c49674bced4ad6ef926b57e9c88a5308365c",
+    "training_only_statistics.json": "9387baaec60753dfbce02751a6d209b3cae53c8f45966fe0f9859a3f99a84f7f",
+    "window_inventory.csv": "2dceaffba9db49f5891795ec125a57eee4a09b70137ce9a854b1604ce3fc6089",
+    "window_trace_manifest.csv": "8c5003751e80b50241666c7e83c577b13511d63665b7b441fa18df4dd821718d"
+  }
+}

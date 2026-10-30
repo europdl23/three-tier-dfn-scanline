@@ -28,7 +28,11 @@ This repository holds code, data and models only. It does not contain manuscript
 | `data/FOLDS.csv`, `INNER_BLOCKS.csv`, `STAGE_INDEX.csv` | Fold definitions: tested wall group, excluded neighbouring groups that share photographs, training groups and window counts |
 | `data/constants/` | Crossing retention ρ of each fold, calibrated on its training windows |
 | `data/adfne_pools/` | Pre-generated ADFNE candidate traces of the cADFNE benchmark (fitted parameters in `*_params.json`), so that no Octave installation is needed |
-| `models/runs/<fold>/outer_full/` | Trained models of training seed 42001: `evae_s42001`, `head_s42001` (continuation head), `tf_latent_s42001` (Hybrid transformer, with EVAE latent token), `tf_no_latent_s42001` (Transformer-only), with the transformer position residuals (`residuals.npz`, `CALIBRATION.json`) and the training-data references |
+| `models/runs/<fold>/outer_full/` | Trained models of training seeds 42001, 42002 and 42003: `evae_s<seed>`, `head_s<seed>` (continuation head), `tf_latent_s<seed>` (Hybrid transformer, with EVAE latent token), `tf_no_latent_s<seed>` (Transformer-only), with the transformer position residuals (`residuals.npz`, `CALIBRATION.json`) and the training-data references |
+| `unseen_benches/` | Test on four bench lines not used in training, epoch selection or any design choice: frozen models trained on all nine wall groups (three training seeds, epochs fixed in advance), labelled traces of the 33 test windows, crossing constant and ADFNE pool |
+| `results/wall_groups/` | Leave-one-wall-out results: paired t-tests with Holm correction over the 15 metrics, Tier 3 tests, seed spread |
+| `results/unseen_benches/` | Unseen-bench results: paired t-tests of all 15 metrics with Holm correction, means, and the errors of every window (including the number of windows with a lower error) |
+| `results/scripts/` | The analysis scripts that computed the result tables (paths refer to the study workstation) |
 | `models/SELECTED_EPOCHS.json` | The training epoch of each model and fold |
 
 ### Data format
@@ -43,7 +47,7 @@ Validation is leave-one-wall-out over nine wall groups; each fold tests one grou
 |---|---|---|---|---|---|---|---|---|---|
 | Fold code | S1W_P1 | S1W_P2 | S1W_P3 | S1W_P4 | S1W_W04 | S1_EAST | S1_WEST | S2_LOW | S2_HIGH |
 
-Scanline layout `S10o5`: vertical scanlines 10 cm wide and 10 m apart, the first 5 m from the left window side. Training seed 42001 (the study also trained seeds 42002 and 42003); generation seeds 72001, 72002 and 72003 for every window.
+Scanline layout `S10o5`: vertical scanlines 10 cm wide and 10 m apart, the first 5 m from the left window side. Training seeds 42001, 42002 and 42003; generation seeds 72001, 72002 and 72003 for every window.
 
 ## Compared frameworks
 

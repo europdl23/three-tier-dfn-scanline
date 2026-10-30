@@ -1,0 +1,9 @@
+{
+ "selected": {
+  "evae": 45,
+  "head": 3,
+  "tf_latent": 11,
+  "tf_no_latent": 8
+ },
+ "rule": "fixed in advance: median over the nine leave-one-wall-out folds of models/SELECTED_EPOCHS.json; no selection on the unseen benches"
+}

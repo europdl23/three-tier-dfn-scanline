@@ -1,0 +1,9 @@
+{
+ "fold": "S8",
+ "config": "B",
+ "rho": 0.5103099199269802,
+ "obs_crossings": 369,
+ "null_crossings": 723.0899999999998,
+ "training_windows": 209,
+ "stage": "C:\\Europe_files\\EVAE_Training\\paper2_paper3_section_study\\PAPER2_RETRAIN_AB_2026-10-28\\phase15_section8\\B\\stages\\S8\\outer_full"
+}
