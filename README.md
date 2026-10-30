@@ -14,7 +14,7 @@ The framework reconstructs the two-dimensional fracture trace network of a bench
 
 The EVAE (dual spatial and geometric latents, 12 and 20 dimensions, attention pooling) and the transformer together form the **Hybrid framework**. The repository also contains the four compared frameworks of the study, all of which share the same observations, trace count, candidate budget and acceptance rules.
 
-This repository holds code, data and models only. It does not contain manuscript figures or tables, photographs, orthophotos or point clouds, and it contains no plotting or image-processing code: functions of the study code that drew figures or read photographs are replaced by stubs that raise an error if called, and none of them is used by the framework. The geological scorer of earlier versions is present only as dormant code and is not used.
+This repository holds code, data and models only. It does not contain manuscript figures, tables or result files, photographs, orthophotos or point clouds, and it contains no plotting or image-processing code: functions of the study code that drew figures or read photographs are replaced by stubs that raise an error if called, and none of them is used by the framework. The geological scorer of earlier versions is present only as dormant code and is not used.
 
 ## Contents
 
@@ -30,9 +30,6 @@ This repository holds code, data and models only. It does not contain manuscript
 | `data/adfne_pools/` | Pre-generated ADFNE candidate traces of the cADFNE benchmark (fitted parameters in `*_params.json`), so that no Octave installation is needed |
 | `models/runs/<fold>/outer_full/` | Trained models of training seeds 42001, 42002 and 42003: `evae_s<seed>`, `head_s<seed>` (continuation head), `tf_latent_s<seed>` (Hybrid transformer, with EVAE latent token), `tf_no_latent_s<seed>` (Transformer-only), with the transformer position residuals (`residuals.npz`, `CALIBRATION.json`) and the training-data references |
 | `unseen_benches/` | Test on four bench lines not used in training, epoch selection or any design choice: frozen models trained on all nine wall groups (three training seeds, epochs fixed in advance), labelled traces of the 33 test windows, crossing constant and ADFNE pool |
-| `results/wall_groups/` | Leave-one-wall-out results: paired t-tests with Holm correction over the 15 metrics, Tier 3 tests, seed spread |
-| `results/unseen_benches/` | Unseen-bench results: paired t-tests of all 15 metrics with Holm correction, means, and the errors of every window (including the number of windows with a lower error) |
-| `results/scripts/` | The analysis scripts that computed the result tables (paths refer to the study workstation) |
 | `models/SELECTED_EPOCHS.json` | The training epoch of each model and fold |
 
 ### Data format
@@ -99,7 +96,7 @@ The paper reports 15 metrics in five groups, computed per reconstruction against
 * **Spatial arrangement:** cell coverage (fraction of 5 m × 6 m cells containing traces); spacing of each cluster.
 * **Topology:** intersection density; I, Y and X node types; number of connected components; largest connected component; top-to-bottom connectivity.
 
-Statistics of the paper: for every framework, metric and wall group, errors are averaged over windows and generation seeds and then over the three training seeds, giving nine paired wall-group means per comparison. Differences are tested with paired two-sided t-tests (n = 9), with Holm correction over the 15 metrics (or over the three Tier 3 inferred-trace measures) within each comparison; the Tier 2 continuation error is a single unadjusted test. The result tables are in `results/` and the scripts that computed them in `results/scripts/` (`ttest_analysis.py`, `tier3_analysis.py`, `tier3only.py`, `unseen_bench_analysis.py`, and `recompute_15.py`, which applies the Holm correction over the 15 metrics; their paths refer to the study workstation).
+Statistics of the paper: for every framework, metric and wall group, errors are averaged over windows and generation seeds and then over the three training seeds, giving nine paired wall-group means per comparison. Differences are tested with paired two-sided t-tests (n = 9), with Holm correction over the 15 metrics (or over the three Tier 3 inferred-trace measures) within each comparison; the Tier 2 continuation error is a single unadjusted test.
 
 `evaluate.py` computes the per-window metric values used by these tests. It also writes an energy distance of trace-centre positions, which is not part of the 15 metrics of the paper, and an earlier wall-group bootstrap with decision rules, which the paper does not use.
 
